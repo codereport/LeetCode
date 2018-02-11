@@ -1,0 +1,17 @@
+
+#include <algorithm>
+
+using namespace std;
+
+bool reachingPoints (int sx, int sy, int tx, int ty) {
+
+	while (sx != tx || sy != ty) {
+
+		if (tx < sx || ty < sy) return false;
+
+		if (tx > ty) tx -= max ((tx - sx) / ty, 1) * ty;
+		else         ty -= max ((ty - sy) / tx, 1) * tx;
+	}
+
+	return true;
+}
