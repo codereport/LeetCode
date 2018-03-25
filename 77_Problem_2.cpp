@@ -1,5 +1,5 @@
 // code_report Solution
-// 
+// https://youtu.be/9QRhJ6z6wmc?t=7m58s
 
 #include <vector>
 #include <string>
@@ -10,8 +10,8 @@ using namespace std;
 int uniqueMorseRepresentations (vector<string>& words)
 {
 	vector<string> a = { ".-","-...","-.-.","-..",".","..-.","--.","....",
-							"..",".---","-.-",".-..","--","-.","---",".--.",
-			                "--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.." };
+						 "..",".---","-.-",".-..","--","-.","---",".--.",
+			             "--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.." };
 
 	unordered_set<string> u;
 
