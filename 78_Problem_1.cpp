@@ -25,6 +25,6 @@ vector<string> subdomainVisits(vector<string>& cpdomains)
     }
 
     vector<string> v;
-    for (const auto& e : m) v.push_back (to_string (e.second) + " " + e.first);
+    for (const auto& e : m) v.emplace_back (to_string (e.second) + " " + e.first);
     return v;
 }
