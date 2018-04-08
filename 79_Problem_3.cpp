@@ -10,8 +10,8 @@ using namespace std;
 double largestSumOfAverages (vector<int>& a, int k) {
 
    int n = a.size ();
-   vector<double> c = { 0.0 };
-   partial_sum (a.begin (), a.end (), back_inserter (c));
+   vector<double> sum = { 0.0 };
+   partial_sum (a.begin (), a.end (), back_inserter (sum));
 
    vector<vector<double>> dp (n + 1, vector<double> (k + 1, -1));
    dp[0][0] = 0;
@@ -20,7 +20,7 @@ double largestSumOfAverages (vector<int>& a, int k) {
       for (int d = 1; d <= k; d++)
          for (int j = 0; j < i; j++)
             if (dp[j][d - 1] != -1)
-               dp[i][d] = max (dp[i][d], dp[j][d - 1] + (c[i] - c[j]) / (i - j));
+               dp[i][d] = max (dp[i][d], dp[j][d - 1] + (sum[i] - sum[j]) / (i - j));
 
    return dp[n][k];
 }
