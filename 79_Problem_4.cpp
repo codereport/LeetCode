@@ -30,10 +30,8 @@ int numBusesToDestination (vector<vector<int>>& routes, int S, int T)
       
       for (const auto& route : stop_routes[stop]) {
          for (const auto& next_stop : routes[route]) {
-            if (!stops_visited.count (next_stop)) {
-               stops_visited.insert (next_stop);
-               to_visit.push ( { next_stop, bus_n + 1 } );
-            }
+            auto it = stops_visited.insert (next_stop);
+            if (it.second) to_visit.push ({ next_stop, bus_n + 1 });              
          }
          
          routes[route].clear ();
