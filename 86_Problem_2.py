@@ -1,5 +1,5 @@
 # code_report Solution
-#
+# https://youtu.be/AWLims83GcU
 
 def canVisitAllRooms (self, rooms):
    todo = [0]
