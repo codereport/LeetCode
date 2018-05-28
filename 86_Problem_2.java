@@ -1,5 +1,5 @@
 // code_report solution
-// 
+// https://youtu.be/AWLims83GcU
 
 public boolean canVisitAllRooms (List<List<Integer>> rooms) 
 {
