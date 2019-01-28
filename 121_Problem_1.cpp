@@ -128,7 +128,7 @@ void replace_skip(R f, R l, int skip, const T& val) {
 string strWithout3a3b(int A, int B) {
     string s(A + B , A > B ? 'a' : 'b');
     auto [c, C] = A > B ? make_pair('b', B ) : make_pair('a', A);
-    auto d = 3 * C - A + B;
+    auto d = 3 * C - (A + B);
     replace_skip(begin(s) + 2, end(s), 3, c);
     replace_skip(begin(s) + 1, begin(s) + 1 + d, 3, c);
     return s;
