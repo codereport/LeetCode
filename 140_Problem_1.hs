@@ -1,6 +1,6 @@
 -- code_report Solution
 -- Video Link:
--- Problem Link:
+-- Problem Link: https://leetcode.com/problems/occurrences-after-bigram/
 
 sliding :: Int -> [a] -> [[a]]
 sliding k xs
