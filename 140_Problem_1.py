@@ -1,6 +1,6 @@
 # code_report Solution
 # Video Link:
-# Problem Link:
+# Problem Link: https://leetcode.com/problems/occurrences-after-bigram/
 
 def findOcurrences(self, t: str, f: str, s: str) -> List[str]:
     l = t.split()
