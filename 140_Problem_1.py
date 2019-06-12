@@ -1,5 +1,5 @@
 # code_report Solution
-# Video Link:
+# Video Link: https://youtu.be/cClOEG-_dns
 # Problem Link: https://leetcode.com/problems/occurrences-after-bigram/
 
 def findOcurrences(self, t: str, f: str, s: str) -> List[str]:
