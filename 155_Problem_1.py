@@ -1,4 +1,4 @@
-# code_report
+# code_report Solution
 # Problem Link: https://leetcode.com/contest/weekly-contest-155/problems/minimum-absolute-difference/
 
 def minimumAbsDifference(self, arr: List[int]) -> List[List[int]]:
