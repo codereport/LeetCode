@@ -17,8 +17,8 @@ vector<int> prevPermOpt1(vector<int>& A) {
 
 template<typename F, typename T>
 F first_less_than(F f, F l, T val) {
-	auto it = std::lower_bound(f, l, val);
-	return it == f ? l : --it;
+    auto it = std::lower_bound(f, l, val);
+    return it == f ? l : --it;
 }
 
 vector<int> prevPermOpt1(vector<int>& A) {
