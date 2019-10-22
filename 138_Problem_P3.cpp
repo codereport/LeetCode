@@ -35,8 +35,8 @@ vector<int> prevPermOpt1(vector<int>& A) {
 
 template<typename F, typename T>
 auto first_less_than_range(F f, F l, T val) {
-	auto i = std::lower_bound(f, l, val);
-	i = i == f ? l : prev(i);
+    auto i = std::lower_bound(f, l, val);
+    i = i == f ? l : prev(i);
     auto j = i == l ? l : i;
     while (i != f && *prev(i) == *j) --i;
     return make_pair(i, j);
