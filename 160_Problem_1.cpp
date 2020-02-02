@@ -1,6 +1,7 @@
 // code_report Solution
 // Problem Link (Contest):  https://leetcode.com/contest/weekly-contest-160/problems/find-positive-integer-solution-for-a-given-equation/
 // Problem Link (Practice): https://leetcode.com/problems/find-positive-integer-solution-for-a-given-equation/
+// Video Solution:          https://youtu.be/gZLZPrgqw2A
 
 vector<vector<int>> findSolution(CustomFunction& f, int z) {
     vector<vector<int>> ans;
