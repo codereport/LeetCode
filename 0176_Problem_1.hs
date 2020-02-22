@@ -4,6 +4,5 @@
 
 countNegatives :: [[Int]] -> Int
 countNegatives = length 
-               . filter (==True) 
-               . map (<0) 
+               . filter (<0) 
                . concat
