@@ -3,8 +3,8 @@
 # Problem Link (Practice): https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/
 
 defmodule LeetCode do
-  def countNegatives(collection) do
-    collection
+  def countNegatives(grid) do
+    grid
     |> Enum.concat()
     |> Enum.filter(fn x -> x < 0 end)
     |> Enum.count()
