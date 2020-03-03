@@ -7,7 +7,7 @@ import std.algorithm.setops : cartesianProduct;
 import std.algorithm.iteration : map, sum;
 import std.range : chunks;
 
-auto smallThanCurrentNumber(int[] nums) {
+auto smallerNumbersThanCurrent(int[] nums) {
     return nums
         .cartesianProduct(nums)
         .map!(x => x[0] > x[1] ? 1 : 0)
