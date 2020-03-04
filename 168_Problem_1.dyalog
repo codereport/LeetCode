@@ -3,4 +3,4 @@
 ⍝ Problem Link (Practice): https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
 ⍝ Video Solution:          https://youtu.be/gZLZPrgqw2A
 
-findNumbers ← {+/2|⍴∘⍕¨⍵}
+findNumbers ← {+/~2|⍴∘⍕¨⍵}
