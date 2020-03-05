@@ -3,4 +3,4 @@
 / Problem Link (Practice): https://leetcode.com/problems/student-attendance-record-i/
 
 chunkEqual:  {(where differ x) cut x}
-checkRecord: {(3 > max sum each chunkEqual t: "L" = x) and 2 > sum "A" = x}
+checkRecord: {(3 > max sum each chunkEqual "L" = x) and 2 > sum "A" = x}
