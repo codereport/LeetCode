@@ -9,3 +9,11 @@ solve ← {(1<+/0=⍵)∨∨/,∘.{(⍵≠0)∧⍺=2×⍵}⍨⍵}
 doublePair ← {∨/,∘.{(⍵≠0)∧⍺=2×⍵}⍨⍵}
 zeroCount  ← {+/=0}
 solve      ← {doublePair ⍵ ∨ 1 < zeroCount ⍵}
+
+⍝ somewhat later
+
+⍝ Solution 1
+checkIfExists ← {(∨/,∘.{(⍵≠0)∧⍺=2×⍵}⍨⍵)∨1<+/0=⍵}
+
+⍝ Solution 2
+checkIfExists ← {(∨/2=,∘.÷⍨(⍵≠0)/⍵)∨1<+/0=⍵}
