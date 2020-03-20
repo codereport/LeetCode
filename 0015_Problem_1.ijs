@@ -3,11 +3,11 @@ NB. Problem Link (Contest):  https://leetcode.com/contest/leetcode-weekly-contes
 NB. Problem Link (Practice): https://leetcode.com/problems/max-consecutive-ones/
 
 sliding =: 4 : '(1 ,: x) <;._3 y'
-differ  =: 3 : '1, >~:/ each 2 sliding x'
+differ  =: 3 : '1, >~:/ each 2 sliding y'
    
-chunk   =: 3 : '(differ x) <;.1 x'
+chunk   =: 3 : '(differ y) <;.1 y'
 sum     =: +/
 max     =: >./
 open    =: >
    
-maxConsecutiveOnes =: 3 : 'max open sum each chunk x'
+maxConsecutiveOnes =: 3 : 'max open sum each chunk y'
