@@ -7,6 +7,5 @@
        (frequencies)
        (filter #(= (first %) (second %)))
        (keys)
-       (concat [-1])
-       (reduce max)))
+       (reduce max -1)))
        
