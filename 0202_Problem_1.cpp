@@ -4,7 +4,7 @@
 
 // Note this problem is very similar to MCO (Max Consecutive Ones)
 
-// Godbold link: https://godbolt.org/z/xWsaor
+// Godbolt link: https://godbolt.org/z/xWsaor
 
 auto three_consecutive_odds(auto const& arr) -> bool {
     auto const max_odds = arr
