@@ -5,3 +5,4 @@
 ⍝ Note this problem is very similar to MCO (Max Consecutive Ones)
 
 tco ← {3≤⌈/+/¨⊆⍨2|⍵} ⍝ ⍨ is the W (Warbler) combinator
+tco ← {3≤⌈/≢¨⊆⍨2|⍵}  ⍝ shorter solution
