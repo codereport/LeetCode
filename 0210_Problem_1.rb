@@ -6,7 +6,7 @@ def max_depth(s)
     return s.tr('^()','')
             .chars
             .map{ |c| c == '(' ? 1 : -1 }
-            .inject([]){ |acc, x| acc << acc.last.to_i + x }
+            .inject([]){ |acc, x| acc << acc.last + x }
             .push(0)
             .max
 end
