@@ -3,5 +3,5 @@
 "Problem Link (Practice): https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix"
 
 Array >> countNegatives [
-   ^ ((self flattened) select: [ :e | e < 0 ]) size.
+   ^ (self flattened select: [ :e | e < 0 ]) size.
 ]
