@@ -39,3 +39,12 @@ int maximumWealth(vector<vector<int>>& accounts) {
         [](auto a, auto b) { return std::max(a, b); }, 
         [](auto const& row) { return std::reduce(row.cbegin(), row.cend()); });
 }
+
+// C++20 Solution (https://www.godbolt.org/z/cTWsEs)
+
+auto maximumWealth(auto const& accounts) -> int {
+    return std::ranges::max(accounts 
+        | std::views::transform([](auto const& row) { 
+            return std::reduce(row.cbegin(), row.cend());
+        }));
+}
