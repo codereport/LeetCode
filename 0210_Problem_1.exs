@@ -20,11 +20,11 @@ defmodule LeetCode do
   def maxDepth(s) do
     s
     |> String.to_charlist()
-    |> Enum.map(fn
-      ?( -> 1
-      ?) -> -1
-      _ -> 0
-    end)
+    |> Enum.map(fn ?( ->  1
+                   ?) -> -1
+                   _  ->  0
+                end)
     |> Enum.scan(&+/2)
     |> Enum.max()
-end
+  end
+end  
