@@ -26,3 +26,11 @@ string replaceDigits(string s) {
         [](auto c, auto p) { return isalpha(c) ? c : p + (c - '0'); });
     return t;
 }
+
+// Solution #4
+
+string replaceDigits(string s) {
+    auto t = s;
+    std::transform(s.cbegin(),s.cend()-1,s.cbegin()+1,t.begin()+1,
+        [](auto p,auto c){ return std::isalpha(c) ? c : static_cast<char>(p + (c - '0')); });
+}
