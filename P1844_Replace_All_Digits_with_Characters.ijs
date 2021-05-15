@@ -13,3 +13,13 @@ replaceDigits3=: $ {. ,@((0 ". }."1) (,@] ,. shift) {."1)@(_2 ]\ ])
 
 NB. Solution 4 (refactor 3 - J works with more naturally with rows than with columns)
 replaceDigits4=: $ {. ,@(([ ,. shift~) 0 ". ,.)/@|:@(_2 ]\ ])
+
+Note 'Testing'
+inputs=: 'a1c1e1';'a1b2c3d4e'
+outputs=: 'abcdef';'abbdcfdhe'
+s=: 0 {:: inputs
+replaceDigits4 s
+replaceDigits4 &.> inputs
+outputs -: replaceDigits4 &.> inputs
+outputs (-:"1)&> (replaceDigits , replaceDigits2 , replaceDigits3 ,: replaceDigits4) &.> inputs
+)
