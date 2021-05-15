@@ -1,7 +1,7 @@
 NB. Problem Link: https://leetcode.com/contest/biweekly-contest-51/problems/replace-all-digits-with-characters/
 
-isAlpha       =. {{ y e. (97+i.26) { a. }}
-replaceDigits =. {{ ({. y), 2 {{ if. isAlpha {. y do. a. {~ (a. i. {. y) + ". {.|. y else. {.|.y end.  }} \ y }}
+isAlpha       =: {{ y e. (97+i.26) { a. }}
+replaceDigits =: {{ ({. y), 2 {{ if. isAlpha {. y do. a. {~ (a. i. {. y) + ". {.|. y else. {.|.y end.  }} \ y }}
 
 NB. Solution 2 (a pair at a time)
 shift=: +&.:(a:`(a.&i.))           NB. uses semidual available from >= J9.02
