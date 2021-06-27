@@ -4,4 +4,4 @@
 lengthOfLongestSubstring ← {⌈/(≢×(∪≡⊢))¨⊃,/,\¨⌽¨,\⍵}
 
 ⍝ Solution 2
-lengthOfLongestSubstring ← {⌈/∊{+\∧\≠⌽⍵}¨,\⌽⍵}
+lengthOfLongestSubstring ← {⌈/∊{+\∧\≠⌽⍵}¨,\⍵}
