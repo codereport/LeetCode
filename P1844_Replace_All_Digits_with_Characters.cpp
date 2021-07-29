@@ -1,30 +1,30 @@
 // Problem Link: https://leetcode.com/contest/biweekly-contest-51/problems/replace-all-digits-with-characters/
 
 // Solution #1
+// https://www.godbolt.org/z/frh3c4YY5
 
-string replaceDigits(string s) {
-    auto t = s;
-    for (int i = 1; i < s.size(); i += 2)
-        t[i] = t[i-1] + (t[i] - '0');
-    return t;
+auto replace_digits(std::string s) -> std::string {
+    for (std::size_t i = 1; i < s.size(); i += 2)
+        s[i] = s[i-1] + (s[i] - '0');
+    return s;
 }
 
 // Solution #2
+// https://www.godbolt.org/z/vz9rn8adG
 
-string replaceDigits(string s) {
-    auto t = s;
-    std::partial_sum(s.cbegin(), s.cend(), t.begin(), 
+auto replace_digits(std::string s) -> std::string {
+    std::partial_sum(s.cbegin(), s.cend(), s.begin(), 
         [](auto p, auto c) { return isalpha(c) ? c : p + (c - '0'); });
-    return t;
+    return s;
 }
 
 // Solution #3 (this one is the best)
+// https://www.godbolt.org/z/z9354MffE
 
-string replaceDigits(string s) {
-    auto t = s;
-    std::adjacent_difference(s.cbegin(), s.cend(), t.begin(), 
+auto replace_digits(std::string s) -> std::string {
+    std::adjacent_difference(s.cbegin(), s.cend(), s.begin(), 
         [](auto c, auto p) { return isalpha(c) ? c : p + (c - '0'); });
-    return t;
+    return s;
 }
 
 // Solution #4
