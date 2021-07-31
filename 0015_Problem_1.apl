@@ -3,3 +3,6 @@
 ⍝ Problem Link (Practice): https://leetcode.com/problems/max-consecutive-ones/
 
 maxConsecutiveOnes ← {⌈/+/¨(1,2≠/⍵)⊂⍵}
+
+⍝ Solution from July 31, 2021
+maxConsecutiveOnes ← ⌈/(+/¨⊆⍨)
