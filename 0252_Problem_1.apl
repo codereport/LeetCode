@@ -1,6 +1,10 @@
 ⍝ Problem Link: https://leetcode.com/contest/weekly-contest-252/problems/three-divisors/
 
+⍝ Solution 1
 isThree ← (3=≢)(∪⊢∨⍳)
+
+⍝ Solution 2 (1 character less)
+isThree ← 3=(≢∘∪⊢∨⍳)
 
 ⍝ Translated J Solution: 
 ⍝ isThree =. [: (3 = #) [: ~. (+. (1 + i.))
@@ -14,4 +18,4 @@ isThree ← (3=≢)(∪⊢∨⍳)
 ⍝    Nub   | ~. | Unique |  ∪
 ⍝    GCD   | +. |   GCD  |  ∨
 
-⍝ Technically the name was Index Generator
+⍝ * Technically the name was Index Generator
