@@ -1,4 +1,4 @@
-// Problem Links: https://leetcode.com/problems/maximum-subarray/
+// Problem Link: https://leetcode.com/problems/maximum-subarray/
 // Godbolt: https://www.godbolt.org/z/fcqoYhEcK
 
 #include <range/v3/view/partial_sum.hpp>
