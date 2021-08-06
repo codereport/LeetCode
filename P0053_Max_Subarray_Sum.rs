@@ -1,4 +1,4 @@
-// Problem Links: https://leetcode.com/problems/maximum-subarray/
+// Problem Link: https://leetcode.com/problems/maximum-subarray/
 
 use core::cmp::max;
 
