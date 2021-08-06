@@ -1,4 +1,4 @@
-# Problem Links: https://leetcode.com/problems/maximum-subarray/
+# Problem Link: https://leetcode.com/problems/maximum-subarray/
 
 def max_sub_array(nums) do
   nums
