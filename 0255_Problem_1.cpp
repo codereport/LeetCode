@@ -2,13 +2,13 @@
 // Godbolt: https://godbolt.org/z/zK4zexfza
 
 // C++17
-int findGCD(std::vector<int> const& nums) {
+int find_gcd(std::vector<int> const& nums) {
     auto const [a, b] = std::minmax_element(nums.cbegin(), nums.cend());
     return std::gcd(*a, *b);
 }
 
 // C++20
-int findGCD(std::vector<int> const& nums) {
+int find_gcd(std::vector<int> const& nums) {
     auto const r = std::ranges::minmax_element(nums);
     return std::gcd(*r.min, *r.max);
 }
