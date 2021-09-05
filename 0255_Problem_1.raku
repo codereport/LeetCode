@@ -6,7 +6,6 @@ sub findGCD ($nums) {
 }
 
 # Solution 2 (use minmax)
-
 sub findGCD(\nums) {
     [gcd] nums.minmax.bounds
 }
