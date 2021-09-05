@@ -21,7 +21,7 @@ function gcd(m, n) result(answer)
     endif
 end function gcd
 
-! LeetCode Solution
+! LeetCode Solution (original)
 function find_gcd(nums, numsSize) result(res)
     implicit none
     integer, intent(in) :: numsSize
@@ -30,3 +30,9 @@ function find_gcd(nums, numsSize) result(res)
 
     res = gcd(minval(nums), maxval(nums))
 end function find_gcd
+
+! LeetCode Solution (improved)
+function find_gcd(nums) 
+    integer, intent(in) :: nums(:)
+    find_gcd = gcd(minval(nums), maxval(nums))
+end function find_gcd
