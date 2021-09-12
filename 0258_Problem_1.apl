@@ -14,3 +14,7 @@ abcd
 ⍝ Fully Tacit (Point Free) Solution ... so god damn beautiful!
 
 reversePrefix ← (⊃∘⍸=)(⌽⍤↑,↓)⊢
+
+⍝ Praise the LORD!!! The dyadic hook is the BLACKBIRD!!! CAN YOU BELIEVE IT!!!!!!
+
+reversePrefix ← ⊃⍤⍸⍤=(⌽⍤↑,↓)⊢
