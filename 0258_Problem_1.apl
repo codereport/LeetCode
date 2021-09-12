@@ -10,3 +10,7 @@ dcbaefd
 zxyxxe
       'z' reversePrefix 'abcd'
 abcd
+
+⍝ Fully Tacit (Point Free) Solution ... so god damn beautiful!
+
+reversePrefix ← (⊃∘⍸=)(⌽⍤↑,↓)⊢
