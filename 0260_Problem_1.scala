@@ -1,4 +1,4 @@
-# Problem Link: https://leetcode.com/contest/weekly-contest-260/problems/maximum-difference-between-increasing-elements/
+// Problem Link: https://leetcode.com/contest/weekly-contest-260/problems/maximum-difference-between-increasing-elements/
 
 def maximumDifference(nums: Array[Int]): Int = {
     nums.scanLeft(Int.MaxValue)(_ min _)
