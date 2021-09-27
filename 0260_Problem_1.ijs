@@ -12,3 +12,6 @@ maximumDifference =. [:>./(-~>./\&.|.)
 
 NB. Full solution
 maximumDifference =. [: >./ _1 , 0 -.~ (-~ >./\&.|.)
+
+NB. Best and Full Solution
+maximumDifference =. [: >./ _1 , 0 -.~ (- <./\)
