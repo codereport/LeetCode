@@ -1,7 +1,6 @@
 NB. Problem Link: https://leetcode.com/contest/weekly-contest-260/problems/maximum-difference-between-increasing-elements/
 
 NB. Original Solution
-
 maximumDifference =. {{ >./ ;(}.&.>~ |.&i.&#) (-&#<\;) -/~ y }}
 
 NB. Tacit (suboptimal IMO)
