@@ -6,5 +6,8 @@ maximumDifference ← {⌈/-∊(⍳∘≢↓¨⊢)↓∘.-⍨⍵}
 ⍝ Tacit (suboptimal IMO)
 maximumDifference ← ⌈/-∘∊∘(⍳∘≢↓¨⊢)∘(↓∘.-⍨)
 
-⍝ Best (and Full) Solution
+⍝ Better (and Full) Solution
 maximumDifference ← ⌈/¯1,0~⍨((⌽⌈\∘⌽)-⊢)
+
+⍝ Best (and Full) Solution
+maximumDifference ← ⌈/¯1,0~⍨(⊢-⌊\)
