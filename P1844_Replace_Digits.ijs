@@ -7,3 +7,6 @@ NB. alternate solution
 f=. a. {~ a.&i.@[ + ]       NB. 'a' f 1 gives 'b'
 g=. {. , {. f ".@}.         NB. g 'a1' gives 'ab'
 h=. [: , _2 g\ ]            NB. ravel results from g on non-overlapping infixes
+
+NB. one line solution using unicode verb with under
+v=. [: , _2 ({. , {. +&.(3&u:) ".@}.)\ ]
