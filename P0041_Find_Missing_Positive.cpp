@@ -7,3 +7,11 @@ auto find_missing_positive(std::vector<int> vec) -> int {
     std::sort(vec.begin(), i);
     return *std::ranges::mismatch(vec, std::views::iota(1)).in2;
 }
+
+// Alternate
+auto find_missing_positive(std::vector<int> vec) -> int {
+    auto r = std::ranges::partition(vec, 
+        [n = vec.size()](auto e) { return 0 < e and e <= n; });
+    std::sort(vec.begin(), std::ranges::begin(r));
+    return *std::ranges::mismatch(vec, std::views::iota(1)).in2;
+}
