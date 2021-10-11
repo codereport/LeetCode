@@ -4,3 +4,6 @@
 
 ⍝ Probably TLE
 findPairs ← {+/,⍺=∘.-⍨∪⍵}
+
+⍝ Tacit / Point Free :) 
+findPairs ← (+/,)⍤(⊣=∘.-⍨∘∪⍤⊢)
