@@ -1,4 +1,4 @@
---  Problem Link: https://leetcode.com/contest/biweekly-contest-63/problems/minimum-number-of-moves-to-seat-everyone/
+-- Problem Link: https://leetcode.com/contest/biweekly-contest-63/problems/minimum-number-of-moves-to-seat-everyone/
 
 import Data.List (sort)
 import Data.Function (on)
