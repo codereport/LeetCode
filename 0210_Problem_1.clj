@@ -3,9 +3,7 @@
 ;; Problem Link (Practice): https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
 
 (defn max-depth [s]
-  (->> s 
-       (re-seq #"[()]")
-       (map #(if (= % "(") 1 -1))
+  (->> s
+       (keep {\( 1, \) -1})
        (reductions +)
        (apply max)))
-       
