@@ -3,9 +3,9 @@
 # Problem Link (Practice): https://leetcode.com/problems/binary-number-with-alternating-bits/
 
 def has_alternating_bits(n)
-    return n.to_s(2)
-            .chars
-            .each_cons(2)
-            .map { |x, y| x != y }
-            .all?
+    n.to_s(2)
+     .chars
+     .each_cons(2)
+     .map { |x, y| x != y }
+     .all?
 end
