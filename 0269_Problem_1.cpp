@@ -12,7 +12,7 @@ auto targetIndices(std::vector<int> nums, int target) {
 
 // Solution 2
 auto targetIndices(std::vector<int> nums, int target) {
-    auto start = std::ranges::count_if(nums, [target](auto e) { return e <  target; });
-    auto count = std::ranges::count_if(nums, [target](auto e) { return e == target; });
+    auto const start = std::ranges::count_if(nums, [target](auto e) { return e <  target; });
+    auto const count = std::ranges::count_if(nums, [target](auto e) { return e == target; });
     return std::views::iota(start, start + count);
 }
