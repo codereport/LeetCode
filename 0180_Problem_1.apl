@@ -5,6 +5,9 @@
 ⍝ Solution 1
 luckyNumbers ← {(⌊/⍵)∩⌈⌿⍵}
 
+⍝ Solution 1 (point free)
+luckyNumbers ← ⌊/∩⌈⌿
+
 ⍝ Solution 2 (Bad)
 a ← (⍪⌊/m) (=⍤1) m ⍝ row mins
 b ← (⌈⌿m) (=⍤1) m ⍝ col maxs
