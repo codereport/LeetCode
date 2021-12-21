@@ -7,6 +7,8 @@ TargetIndices ← (+´>)+(↕·+´=)
 TargetIndices ← >(⊣+↕∘⊢)○(+´)=
 TargetIndices ← >{𝕨+↕𝕩}○(+´)=
 
+TargetIndices ← >(+⟜↕)○(+´)= # Discovered while during ArrayCast Episode: https://www.arraycast.com/episodes/episode17-tacit-4 (will update with correct link)
+
 # Tests
 2 TargetIndices 1‿2‿5‿2‿3 # ⟨ 1 2 ⟩
 3 TargetIndices 1‿2‿5‿2‿3 # ⟨ 3 ⟩
