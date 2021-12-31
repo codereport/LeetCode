@@ -10,11 +10,11 @@ string strWithout3a3b(int A, int B) {
     int n = A + B, i = 0;
     while (i < n) {
         if (a_turn) {
-        if (A - B > 1) s += "aa", i += 2, A -= 2;
-        else           s += 'a',  i += 1, A -= 1;
+            if (A - B > 1) s += "aa", i += 2, A -= 2;
+            else           s += 'a',  i += 1, A -= 1;
         } else {
-        if (B - A > 1) s += "bb", i += 2, B -= 2;
-        else           s += 'b',  i += 1, B -= 1;
+            if (B - A > 1) s += "bb", i += 2, B -= 2;
+            else           s += 'b',  i += 1, B -= 1;
         }
         a_turn = !a_turn;
     }
