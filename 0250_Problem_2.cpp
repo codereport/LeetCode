@@ -3,7 +3,7 @@
 
 int addRungs(std::vector<int> rungs, int dist) {
     auto diffs = rungs;
-    std::adjacent_difference(rungs.begin(), rungs.end(), diffs.begin());
+    std::adjacent_difference(rungs.cbegin(), rungs.cend(), diffs.begin());
     return std::accumulate(diffs.begin(), diffs.end(), 0,
         [dist](auto rungsNeeded, auto diff) {
             return rungsNeeded + (diff - 1) / dist;
