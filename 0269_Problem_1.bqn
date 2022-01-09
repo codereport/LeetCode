@@ -9,6 +9,8 @@ TargetIndices ← >{𝕨+↕𝕩}○(+´)=
 
 TargetIndices ← >+⟜↕○(+´)= # Discovered while during ArrayCast Episode:https://www.arraycast.com/episodes/episode17-tacit4-the-dyadic-hook
 
+TargetIndices ← /=⟜∧ # Discovered this after tweeting poll: https://twitter.com/adspthepodcast/status/1479843258520018949?s=20
+
 # Tests
 2 TargetIndices 1‿2‿5‿2‿3 # ⟨ 1 2 ⟩
 3 TargetIndices 1‿2‿5‿2‿3 # ⟨ 3 ⟩
