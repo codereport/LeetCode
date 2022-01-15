@@ -11,6 +11,8 @@ TargetIndices ← >+⟜↕○(+´)= # Discovered while during ArrayCast Episode:
 
 TargetIndices ← /=⟜∧ # Discovered this after tweeting poll: https://twitter.com/adspthepodcast/status/1479843258520018949?s=20
 
+TargetIndices ← =/⍋∘⍋∘⊢ # Discovered on Jan 14
+
 # Tests
 2 TargetIndices 1‿2‿5‿2‿3 # ⟨ 1 2 ⟩
 3 TargetIndices 1‿2‿5‿2‿3 # ⟨ 3 ⟩
