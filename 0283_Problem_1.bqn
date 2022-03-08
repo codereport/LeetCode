@@ -1,4 +1,5 @@
 # Problem Link: https://leetcode.com/contest/weekly-contest-283/problems/cells-in-a-range-on-an-excel-sheet/
+# Permalink: https://mlochbaum.github.io/BQN/try.html#code=Q2VsbHNJblJhbmdlIOKGkCB7CiAgIGHigL944oC/Y+KAv2LigL95IOKGkCDwnZWpCiAgIFIg4oaQIHvwnZWpL8uc4oio4p+cKOKJoGAp8J2VqeKIivCdlah9ICMgcmFuZ2UKICAgbCDihpAgYeKAv2IgUiAnQScr4oaVMjYgICMgbGV0dGVycwogICBuIOKGkCB44oC/eSBSICcwJyvihpUxMCAgIyBudW1iZXJzCiAgIOKlimziiL7ijJxuCn0KCiMgVGVzdHMKQ2VsbHNJblJhbmdlICJLMTpMMiIgIyDin6ggIksxIiAiSzIiICJMMSIgIkwyIiDin6kKQ2VsbHNJblJhbmdlICJBMTpGMSIgIyDin6ggIkExIiAiQjEiICJDMSIgIkQxIiAiRTEiICJGMSIg4p+pCkNlbGxzSW5SYW5nZSAiSzE6TTMiICMg4p+oICJLMSIgIksyIiAiSzMiICJMMSIgIkwyIiAiTDMiICJNMSIgIk0yIiAiTTMiIOKfqQ==
 
 CellsInRange ← {
    a‿x‿c‿b‿y ← 𝕩
