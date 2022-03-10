@@ -10,7 +10,7 @@ MinimalKSum ← {
 
 # Alternative solution after rak1507 pointed out that the above one was wrong (https://twitter.com/rak_1507/status/1501747657739542528?s=20&t=loyHC0NBWwTLWTXrmSq7NA)
 MinimalKSum ← {
-   +´𝕨↑1↓/𝕩¬∘∊˜↕2×≠𝕩
+      +´𝕨↑1↓/𝕩¬∘∊˜↕1+𝕨+≠𝕩
 
 # Tests
 2 MinimalKSum 1‿4‿25‿10‿25 # 5
