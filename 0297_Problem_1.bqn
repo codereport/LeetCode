@@ -1,9 +1,6 @@
 # Problem Link: https://leetcode.com/contest/weekly-contest-297/problems/calculate-amount-paid-in-taxes/
 
-CalculateTax ← {
-   b‿t ← 𝕩
-   100÷˜+´t⊏˜+`b∊˜↕𝕨
-}
+CalculateTax ← { b‿t ← 𝕩 ⋄ 100÷˜+´t⊏˜+`b∊˜↕𝕨 }
 
 # Tests
 10 CalculateTax ⟨3,7,12⟩‿⟨50,10,25⟩ # 2.65
