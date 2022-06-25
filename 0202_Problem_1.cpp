@@ -4,13 +4,13 @@
 
 // Note this problem is very similar to MCO (Max Consecutive Ones)
 
-// Godbolt link: https://godbolt.org/z/xWsaor
+// Godbolt link: https://godbolt.org/z/fc5qqGqze
 
 auto three_consecutive_odds(auto const& arr) -> bool {
     auto const max_odds = arr
-        | rv::group_by([](auto a, auto b) { return a % 2 == b % 2; })
+        | rv::chunk_by([](auto a, auto b) { return a % 2 == b % 2; })
         | rv::filter([](auto rng) { return rng[0] % 2 == 1; })
         | rv::transform(ranges::distance)
-        | hs::maximum();
+        | r_::maximum();
     return max_odds >= 3;
 }
