@@ -1,10 +1,9 @@
 # Problem Link: https://leetcode.com/contest/weekly-contest-299/problems/check-if-matrix-is-x-matrix/
 
-using LinearAlgebra
+using LinearAlgebra # I
 
 function checkmatrix(grid)
-  n = size(grid, 1)          # number of rows
-  i = Matrix{Int64}(I, n, n) # identity matrix
+  i = Matrix(I(size(grid, 1))) # identity matrix
   min.(grid, 1) == max.(i, reverse(i, dims=1))
 end
 
