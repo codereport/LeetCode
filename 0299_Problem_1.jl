@@ -3,7 +3,7 @@
 using LinearAlgebra # I
 
 function checkmatrix(grid)
-  i = Matrix(I(size(grid, 1))) # identity matrix
+  i = size(grid, 1) |> I |> Matrix # identity matrix
   min.(grid, 1) == max.(i, reverse(i, dims=1))
 end
 
