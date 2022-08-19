@@ -1,0 +1,11 @@
+% Problem Link: https://leetcode.com/contest/weekly-contest-299/problems/check-if-matrix-is-x-matrix/
+
+checkmatrix IS OPERATION GRID {
+    N := first shape grid ;
+    I := count N OUTER = count N ;
+    GRID > 0 = (BYROWS reverse I max I)
+}
+
+% Tests
+checkmatrix (4 4 reshape 2 0 0 1 0 3 1 0 0 5 2 0 4 0 0 2) % l
+checkmatrix (3 3 reshape 5 7 0 0 3 1 0 5 0)               % o
