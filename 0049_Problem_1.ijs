@@ -13,3 +13,7 @@ findLengthOfLCIS =. {{ 1 + max open sum each chunk open </ each 2 sliding y }}
 NB. or
 
 findLengthOfLCIS =. {{ 1 + >./ > +/ each <;._2 > </ each 2<\ y }}
+
+NB. or 
+
+findLengthOfLCIS =. {{ 1 + >./ +/"1 > <;._2 </"1 >2<\ y }}
