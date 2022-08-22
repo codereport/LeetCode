@@ -14,10 +14,10 @@ open    =: >
 maxConsecutiveOnes =: 3 : 'max open sum each chunk y'
 
 NB. Revised solution on Aug 21, 2022
-max =. >./
-chunk =. {{ (#;._1) 0,y }}
+max          =. >./
+chunkLengths =. {{ (#;._1) 0,y }}
 
-maxConsecutiveOnes =. max @ chunk
+maxConsecutiveOnes =. max @ chunkLengths
 
 NB. Without naming
 maxConsecutiveOnes =. [: >./ [: (#;._1) 0,]  NB. tacit
