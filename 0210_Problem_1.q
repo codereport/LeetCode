@@ -3,3 +3,6 @@
 / Problem Link (Practice): https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
 
 maxDepth: { max sums {$[x = "(" ; 1 ; -1]} each x where (x in "()") }
+
+/ Alternative solution
+maxDepth: { max sums (-) over "()" =/:\: x }
