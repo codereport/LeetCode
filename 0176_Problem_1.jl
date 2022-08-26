@@ -13,3 +13,8 @@ end
 function countnegatives(grid)
     @pipe grid |> vec |> filter(x -> x < 0, _) |> length
 end
+
+# Updated solution Aug 26, 2022
+function countnegatives(grid)
+    sum(grid .< 0)
+end
