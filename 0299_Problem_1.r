@@ -1,9 +1,16 @@
 # Problem Link: https://leetcode.com/contest/weekly-contest-299/problems/check-if-matrix-is-x-matrix/
 
+# Using diag
+check_matrix <- function(grid) {
+   i = diag(nrow(grid))
+   all(pmin(grid, 1) == pmax(i, apply(i, 2, rev)))
+}
+
+# Without using diag
 check_matrix <- function(grid) {
    n = nrow(grid)
-   i = diag(n)
-   return(all(pmin(grid, 1) == pmax(i, i[n:1,])))
+   i = outer(1:n, 1:n, "==")
+   all(pmin(grid, 1) == pmax(i, apply(i, 2, rev)))
 }
 
 # Tests
