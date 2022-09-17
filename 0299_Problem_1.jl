@@ -2,8 +2,16 @@
 
 using LinearAlgebra # I
 
+# Using I (for Identity)
 function checkmatrix(grid)
   i = size(grid, 1) |> I |> Matrix # identity matrix
+  min.(grid, 1) == max.(i, reverse(i, dims=1))
+end
+
+# Without using I
+function checkmatrix(grid)
+  n = size(grid, 1)
+  i = 1:n .== 1:n |> transpose
   min.(grid, 1) == max.(i, reverse(i, dims=1))
 end
 
