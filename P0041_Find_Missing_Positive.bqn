@@ -9,7 +9,7 @@ FindMissingPositive ← (1+⊑∘/)∘(¬⊢∊˜1+(↕1+≠))
 
 # Third Solution
 
-FindMissingPositive ← (⊑1+0⊐˜⊢∊˜1+↕∘≠)
+FindMissingPositive ← ⊑1+0⊐˜⊢∊˜1+↕∘≠
 
 # LeetCode Tests
 FindMissingPositive ¨ (1‿2‿0)‿(3‿4‿¯1‿1)‿(7‿8‿9‿11‿12)
