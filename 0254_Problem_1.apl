@@ -3,9 +3,6 @@
  numOfStrings ← {+/∨/↑⍺∘.⍷⊂⍵}
  
 ⍝ LeetCode tests
-      'a' 'abc' 'bc' 'd' numOfStrings 'abc'
-3
-      'a' 'b' 'c' numOfStrings 'aaabbb'
-2
-      'a' 'a' 'a' numOfStrings 'ab'
-3
+'a' 'abc' 'bc' 'd' numOfStrings 'abc'    ⍝ 3
+       'a' 'b' 'c' numOfStrings 'aaabbb' ⍝ 2
+       'a' 'a' 'a' numOfStrings 'ab'     ⍝ 3
