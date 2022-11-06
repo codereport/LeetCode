@@ -1,8 +1,8 @@
 # Problem Link: https://leetcode.com/problems/apply-operations-to-an-array/
 
 ApplyOperations ← {
-  mask ← 1∾˜×⟜(¬2=¯1⊸⌽)1+=´˘2↕𝕩
-  (0⊸<⊸/∾0⊸=⊸/)mask×𝕩
+  mask ← 1∾˜×⟜(2≠¯1⊸⌽)1+=´˘2↕𝕩
+  ∾0⊸=⊸⊔ mask×𝕩
 }
 
 # Tests
