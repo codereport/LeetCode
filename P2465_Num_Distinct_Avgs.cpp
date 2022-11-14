@@ -1,4 +1,5 @@
 // Problem Link: https://leetcode.com/contest/biweekly-contest-91/problems/number-of-distinct-averages/
+// Godbolt: https://godbolt.org/z/TYP3nn33P
 
 auto distinct_averages(std::vector<int>& nums) {
     std::sort(nums.begin(), nums.end());
