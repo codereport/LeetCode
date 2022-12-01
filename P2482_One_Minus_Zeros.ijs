@@ -1,6 +1,6 @@
 NB. Problem Link: https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column/
 
-oneMinusZeros =. -&:(+/"1+/+/)-.
+oneMinusZeros =. -&(+/"1+/+/)-.
    
 NB. Tests
    oneMinusZeros 3 3$0 1 1 1 0 1 0 0 1
