@@ -5,5 +5,5 @@
 findLengthOfLCIS ← {1+⌈/+/¨(1,2≠/t)⊂t←2</⍵} ⍝ Mar 10, 2020 - Original  solution
 findLengthOfLCIS ← {⌈/≢¨(1,~2</⍵)⊂⍵}        ⍝ Nov  1, 2020 - Improved  solution
 findLengthOfLCIS ← {⌈/≢¨(1,2≥/⍵)⊂⍵}         ⍝ Nov  1, 2020 - Improved  solution
-findLengthOfLCIS ← ⌈/≢¨({1,2≥/⍵}⊂⊢)         ⍝ Nov  1, 2020 - Alternate solution
-findLengthOfLCIS ← ⌈/≢¨((1,2≥/⊢)⊂⊢)         ⍝ Nov  1, 2020 - Alternate solution after watching: https://youtu.be/Enlh5qwwDuY
+findLengthOfLCIS ← ⌈/(≢¨{1,2≥/⍵}⊂⊢)         ⍝ Nov  1, 2020 - Alternate solution
+findLengthOfLCIS ← ⌈/(≢¨(1,2≥/⊢)⊂⊢)         ⍝ Nov  1, 2020 - Alternate solution after watching: https://youtu.be/Enlh5qwwDuY
