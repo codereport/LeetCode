@@ -17,3 +17,5 @@ findLengthOfLCIS =. {{ 1 + >./ > +/ each <;._2 > </ each 2<\ y }}
 NB. or 
 
 findLengthOfLCIS =. {{ 1 + >./ +/"1 > <;._2 </"1 >2<\ y }}
+
+findLengthOfLCIS =. {{ 1 + >./ (#;._1) 0,2</\ y }}
