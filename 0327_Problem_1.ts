@@ -4,6 +4,5 @@
 function maximumCount(nums: number[]): number {
     return Math.max(
         nums.filter(e => e > 0).length,
-        nums.filter(e => e < 0).length
-    )
+        nums.filter(e => e < 0).length)
 };
