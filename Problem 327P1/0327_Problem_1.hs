@@ -1,9 +1,19 @@
+import Data.Function ( on )
+import Data.List ( partition )
+
 -- Problem Link: https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/
 
 -- Solution 1
-maximumCount xs = on max length pos neg
+maximumCount1 :: (Ord a, Num a) => [a] -> Int
+maximumCount1 xs = on max length pos neg
     where pos = filter (>0) xs
           neg = filter (<0) xs
 
 -- Solution 2 (point free)
-maximumCount = (on max length . filter (<0)) <*> filter (>0)
+maximumCount2 :: [Integer] -> Int
+maximumCount2 = (on max length . filter (<0)) <*> filter (>0)
+
+-- Solution 3 (by Lorin Lange)
+maximumCount3 :: (Ord a, Num a) => [a] -> Int
+maximumCount3 xs = on max length pos neg
+    where (pos,neg) = partition (>0) xs
