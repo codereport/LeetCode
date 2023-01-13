@@ -24,6 +24,6 @@ maximumCount3 xs = on max length pos neg
 -- Solution 4 (by Lorin Lange)
 maximumCount4 :: (Ord a, Num a) => [a] -> Int
 maximumCount4 xs = uncurry max $ foldr select (0,0) xs
-    where select x (ts,fs) | x > 0     = (ts + 1,fs)
-                           | x < 0     = (ts, fs + 1)
-                           | otherwise = (ts,fs)
+    where select x (pos, neg) | x > 0     = (pos + 1, neg)
+                              | x < 0     = (pos, neg + 1)
+                              | otherwise = (pos, neg)
