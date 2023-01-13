@@ -16,4 +16,7 @@ maximumCount2 = (on max length . filter (<0)) <*> filter (>0)
 -- Solution 3 (by Lorin Lange)
 maximumCount3 :: (Ord a, Num a) => [a] -> Int
 maximumCount3 xs = on max length pos neg
-    where (pos,neg) = partition (>0) xs
+    where (pos, neg) = foldr select ([],[]) xs
+          select x (ts,fs) | x > 0     = (x:ts,fs)
+                           | x < 0     = (ts, x:fs)
+                           | otherwise = (ts,fs)
