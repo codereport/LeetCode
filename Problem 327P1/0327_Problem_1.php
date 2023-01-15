@@ -1,5 +1,6 @@
-<!-- Problem Link: https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/ -->
-<!-- LeetCode Benchmark: 39 ms -->
+<?php
+// Problem Link: https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/
+// LeetCode Benchmark: 39 ms
 
 function maximumCount($nums) {
     $pos = 0;
