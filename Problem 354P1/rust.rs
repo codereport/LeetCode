@@ -1,12 +1,12 @@
 // Problem Link: https://leetcode.com/problems/sum-of-squares-of-special-elements/
 
 // Imperative solution
-// Rust Playground: https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=fcb4ad0d106c6f0cf27550851e0c0565
+// Rust Playground: https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=780788cb8507c626ae25bb93c3efc323
 pub fn sum_of_squares(nums: Vec<i32>) -> i32 {
-    let n = nums.len() as i32;
+    let n = nums.len();
     let mut res = 0;
-    for (i, x) in (1..=n).zip(nums) {
-        if n % i == 0 {
+    for (i, x) in nums.iter().enumerate() {
+        if n % (i + 1) == 0 {
             res += x * x;
         }
     }
@@ -14,12 +14,12 @@ pub fn sum_of_squares(nums: Vec<i32>) -> i32 {
 }
 
 // Functional solution
-// Rust Playground: https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=fa896fe6e137440d7396301486c9379b
+// Rust Playground: https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=dcf2893165c86e8a385b8cce4610bc93
 pub fn sum_of_squares(nums: Vec<i32>) -> i32 {
-    let n = nums.len() as i32;
-    (1..=n)
-        .zip(nums)
-        .filter(|(i, _)| n % i == 0)
+    let n = nums.len();
+    nums.iter()
+        .enumerate()
+        .filter(|(i, _)| n % (i + 1) == 0)
         .map(|(_, x)| x * x)
         .sum()
 }
