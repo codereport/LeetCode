@@ -6,7 +6,7 @@ pub fn sum_of_squares(nums: Vec<i32>) -> i32 {
     (1..=n)
         .zip(nums)
         .filter(|(i, _)| n % i == 0)
-        .map(|(_, x)| i32::pow(x, 2))
+        .map(|(_, x)| x * x)
         .sum()
 }
 
