@@ -8,7 +8,6 @@ auto sum_of_squares(std::vector<int> nums) -> int32_t {
         |> filter($, _b(_eq(0), _b(_mod(n), _fst)))
         |> transform($, _b(_w(_mul_), _snd)) 
         |> ranges::fold_left($, 0, std::plus{});
-        
 }
 
 // Tests
