@@ -21,6 +21,18 @@ auto sum_of_squares(std::vector<int> nums) -> int32_t {
         0, std::plus{}) ;
 }
 
+// compiler explorer: https://godbolt.org/z/azrY7oMrv
+// idea courtesy of Ben Deane
+auto sum_of_squares(std::vector<int> nums) -> int32_t {
+    return std::transform_reduce(
+        nums.begin(), nums.end(), std::views::iota(1).begin(), 0,
+        std::plus{},
+        [&](auto x, auto i) {
+            return nums.size() % i == 0 ? x * x : 0;
+        }
+    );
+}
+
 // Tests
 auto main() -> int {
     fmt::println("{}", sum_of_squares(std::vector{1, 2, 3, 4})); // 21

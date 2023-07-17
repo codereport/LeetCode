@@ -1,6 +1,7 @@
 
 // without blackbird
 // compiler explorer: https://godbolt.org/z/v1o1rThT7
+// code courtesy of Tristan Brindle
 auto sum_of_squares(std::vector<int> nums) -> int {
   return flux::zip(flux::ref(nums), flux::ints(1))
       .filter([&](auto pair) { return nums.size() % pair.second == 0; })
