@@ -9,10 +9,10 @@ auto sum_of_squares(std::vector<int> nums) -> int {
 };
 
 // with blackbird
-// compiler explorer: https://godbolt.org/z/adE74P7oW
+// compiler explorer: https://godbolt.org/z/W5YhYWv4b
 auto sum_of_squares(std::vector<int> nums) -> int {
   return flux::zip(flux::ref(nums), flux::ints(1))
-      .filter(_b(_eq(0), _b(_mod(nums.size()), _snd)))
+      .filter(_bb(_eq(0), _mod(nums.size()), _snd))
       .map(_b(_w(_mul_), _fst))
       .sum();
 };
