@@ -1,10 +1,10 @@
 // Problem Link: https://leetcode.com/problems/sum-of-squares-of-special-elements/
-// Compiler Explorer: https://godbolt.org/z/YahTMjYYM
+// Compiler Explorer: https://godbolt.org/z/7aEfzhEPE
 
 auto sum_of_squares(std::vector<int> nums) -> int32_t {
-    return iota(1)
-        |> zip($, nums)
-        |> filter($, _bb(_eq(0), _mod(nums.size()), _fst))
+    return nums
+        |> enumerate($)
+        |> filter($, _bbb(_eq(0), _mod(nums.size()), _plus(1), _fst))
         |> transform($, _b(_w(_mul_), _snd)) 
         |> ranges::fold_left($, 0, std::plus{});
 }

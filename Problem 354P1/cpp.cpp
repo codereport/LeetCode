@@ -12,11 +12,11 @@ auto sum_of_squares(auto nums) -> int {
     return res;
 }
 
-// compiler explorer: https://godbolt.org/z/Ys4jGabd8
+// compiler explorer: https://godbolt.org/z/zYKWjYsr4
 auto sum_of_squares(std::vector<int> nums) -> int32_t {
-    return ranges::fold_left(
-        std::views::zip(std::views::iota(1), nums)
-        | std::views::filter([&](auto t) { return nums.size() % std::get<0>(t) == 0; })
+    return ranges::fold_left(nums
+        | std::views::enumerate
+        | std::views::filter([&](auto t) { return nums.size() % (std::get<0>(t) + 1) == 0; })
         | std::views::transform([](auto t) { return std::get<1>(t) * std::get<1>(t); }), 
         0, std::plus{}) ;
 }
