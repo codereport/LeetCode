@@ -14,12 +14,11 @@ pub fn sum_of_squares(nums: Vec<i32>) -> i32 {
 }
 
 // Functional solution
-// Rust Playground: https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=dcf2893165c86e8a385b8cce4610bc93
+// Rust Playground: https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=9f9deaf9d20434d901d2ee55fc99c7e4
 pub fn sum_of_squares(nums: Vec<i32>) -> i32 {
-    let n = nums.len();
     nums.iter()
         .enumerate()
-        .filter(|(i, _)| n % (i + 1) == 0)
+        .filter(|(i, _)| nums.len() % (i + 1) == 0)
         .map(|(_, x)| x * x)
         .sum()
 }
