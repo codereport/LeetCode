@@ -1,4 +1,4 @@
-NB. Problem Link: Problem Link: https://leetcode.com/problems/sum-of-squares-of-special-elements/
+NB. Problem Link: https://leetcode.com/problems/sum-of-squares-of-special-elements/
 
 SumOfSquares =. {{ +/*~y*0=([|~1+i.)#y }}
 
