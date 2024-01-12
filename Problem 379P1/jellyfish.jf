@@ -1,0 +1,15 @@
+# Problem Link: https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/description/
+
+sq each sum pair prod . each maxr last
+
+    This is a 1-q-1-2-1-s-q-1-1 monadic chain (BΦB)
+              └┬┘ ⋮   ⋮   ⋮ └┬┘
+              h₁  ⋮   ⋮   ⋮  B
+               └┬─┘   ⋮   ⋮  ⋮
+                B     ⋮   ⋮  ⋮
+                └──┬──┘   ⋮  ⋮
+                   Φ      ⋮  ⋮
+                   └──┬───┘  ⋮
+                     h₁      ⋮
+                      └──┬───┘
+                         B
