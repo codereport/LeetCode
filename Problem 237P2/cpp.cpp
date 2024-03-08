@@ -1,3 +1,5 @@
+// Godbolt Link: https://godbolt.org/z/vb668z7Y5
+
 #include <print>
 #include <range/v3/all.hpp>
 
