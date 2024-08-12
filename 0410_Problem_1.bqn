@@ -3,18 +3,23 @@
 
 # Link: https://leetcode.com/problems/snake-in-matrix
 
+# Explicit Solution
 FinalPositionOfSnake ← {
-    n 𝕊 commands:
+    commands 𝕊 n:
     deltas ← ⟨0‿1,0‿¯1,1‿0,¯1‿0⟩
     map    ← "RIGHT"‿"LEFT"‿"DOWN"‿"UP"
     final  ← +´(map⊐commands)⊏deltas
     final⊑n‿n⥊↕×˜n
 }
 
-FinalPositionOfSnake2 ← (⋈⥊↕∘×)˜⊸(⊑˜)⟜(+´⟨0‿1,0‿¯1,1‿0,¯1‿0⟩⊏˜"RIGHT"‿"LEFT"‿"DOWN"‿"UP"⊐⊢)
+# Tacit Solution
+d ← ⟨0‿1,0‿¯1,1‿0,¯1‿0⟩        # deltas
+m ← "RIGHT"‿"LEFT"‿"DOWN"‿"UP" # map
+
+FinalPositionOfSnake2 ← (+´d⊏˜m⊐⊢)⊸⊑⟜((⋈⥊↕∘×)˜)
 
 # Tests
-•Show 2 FinalPositionOfSnake  ⟨"RIGHT","DOWN"⟩      # 3
-•Show 3 FinalPositionOfSnake  ⟨"DOWN","RIGHT","UP"⟩ # 1
-•Show 2 FinalPositionOfSnake2 ⟨"RIGHT","DOWN"⟩      # 3
-•Show 3 FinalPositionOfSnake2 ⟨"DOWN","RIGHT","UP"⟩ # 1
+•Show      ⟨"RIGHT","DOWN"⟩ FinalPositionOfSnake  2 # 3
+•Show ⟨"DOWN","RIGHT","UP"⟩ FinalPositionOfSnake  3 # 1
+•Show      ⟨"RIGHT","DOWN"⟩ FinalPositionOfSnake2 2 # 3
+•Show ⟨"DOWN","RIGHT","UP"⟩ FinalPositionOfSnake2 3 # 1
