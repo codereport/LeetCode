@@ -1,10 +1,18 @@
 #include <vector>
 #include <ranges>
 
-std::vector<int> getFinalState(std::vector<int> nums, int k, int m) {
+// Solution
+auto getFinalState(std::vector<int> nums, int k, int m) {
     while (k--) {
         auto i = std::ranges::min_element(nums);
-        *i = *i * m;
+        *i *= m;
     }
+    return nums;
+}
+
+// Small refactor
+auto getFinalState(std::vector<int> nums, int k, int m) {
+    while (k--)
+        *std::ranges::min_element(nums) *= m;
     return nums;
 }
