@@ -2,16 +2,17 @@
 
 from more_itertools import sliding_window
 from collections import Counter
-from numpy import array
-
-
-def invert(d):
-    return [[v, k] for k, v in d.items()]
+from math import prod
 
 
 def FindXSum(nums, k, x):
     return [
-        array(sorted(invert(Counter(sorted(window))))[-x:]).prod(1).sum()
+        sum(
+            map(
+                lambda xs: prod(xs),
+                sorted([v, k] for k, v in Counter(window).items())[-x:],
+            )
+        )
         for window in sliding_window(nums, k)
     ]
 
