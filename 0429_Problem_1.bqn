@@ -3,6 +3,8 @@
 
 # Link: https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct
 
+u ⇐ •Import "/home/cph/bqn-test/test.bqn"
+
 MinimumOperations ← +´·(⍷≠○≠⊢)¨(0=3|↕∘≠)/¯1↓↓
 
 # Tests
