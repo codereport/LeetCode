@@ -1,3 +1,5 @@
+-- https://play.haskell.org/saved/od4xTsf8
+
 import Data.List (tails)
 -- import Data.List.HT (every)
 -- import Data.List.Predicate (allUnique)
